@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "NoBidMechanical";
+  src: url("NoBidMechanicalVF.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+body {
+  font-family: "NoBidMechanical", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "NoBidMechanical", sans-serif;
+  font-weight: 400;
+  background-color: #fdfdfd;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  padding: 20px;
+}
+
+h1 {
+  font-family: "NoBidMechanical", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: 0.5em;
+}
+
+.name {
+  font-weight: 700;
+  color: hsl(0, 0%, 0%); /* Customize with your school colors */
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+}
