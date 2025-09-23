@@ -19,7 +19,7 @@ html.ftcc {
   --accent: #F1B825;
   --top1-foreground: #ffffff;
   --btn-hover-color: #33a7b5bf;
-  --btn-active-color: #F1B825;
+  --btn-active-color: #ffffff;
 }
 
 /* ECU */
@@ -29,7 +29,7 @@ html.ecu {
   --accent: #FEC923;
   --top1-foreground: #ffffff;
   --btn-hover-color: #00818F;
-  --btn-active-color: #FEC923;
+  --btn-active-color: #ffffff;
 }
 
 /* NCSU */
@@ -39,7 +39,7 @@ html.ncsu {
   --accent: #CC0000;
   --top1-foreground: #ffffff;
   --btn-hover-color: #008473;
-  --btn-active-color: #000000;
+  --btn-active-color: #ffffff;
 }
 
 /* ================= Light/Dark Mode for Middle ================= */
