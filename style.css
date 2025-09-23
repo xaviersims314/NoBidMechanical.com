@@ -1,46 +1,102 @@
-@font-face {
-  font-family: "NoBidMechanical";
-  src: url("NoBidMechanicalVF.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
+/* ===== Base Layout (unit proportions converted to vh) ===== */
+:root{
+  --top1-h: 14.765625vh;  /* 189/1280 */
+  --top2-h: 3.90625vh;    /* 50/1280 */
+  --top3-h: 3.90625vh;
+  --mid-h: 54.84375vh;    /* 702/1280 */
+  --bt1-h: 3.90625vh;
+  --bt2-h: 3.90625vh;
+  --bt3-h: 14.765625vh;
+
+  --page-font: "NoBidMechanical", sans-serif;
 }
 
-body {
-  font-family: "NoBidMechanical", sans-serif;
+/* ================= THEME COLORS ================= */
+/* FTCC */
+html.ftcc {
+  --top1: #000000; --top2: #ffffff; --top3: #F1B825;
+  --bottom1: #F1B825; --bottom2: #ffffff; --bottom3: #000000;
+  --accent: #F1B825;
+  --top1-foreground: #ffffff;
+  --btn-hover-color: #33a7b5bf;
+  --btn-active-color: #F1B825;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "NoBidMechanical", sans-serif;
-  font-weight: 400;
-  background-color: #fdfdfd;
-  color: #000000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+/* ECU */
+html.ecu {
+  --top1: #592A8A; --top2: #41215E; --top3: #FEC923;
+  --bottom1: #FEC923; --bottom2: #41215E; --bottom3: #592A8A;
+  --accent: #FEC923;
+  --top1-foreground: #ffffff;
+  --btn-hover-color: #00818F;
+  --btn-active-color: #FEC923;
+}
+
+/* NCSU */
+html.ncsu {
+  --top1: #CC0000; --top2: #FFFFFF; --top3: #CC0000;
+  --bottom1: #CC0000; --bottom2: #FFFFFF; --bottom3: #CC0000;
+  --accent: #CC0000;
+  --top1-foreground: #ffffff;
+  --btn-hover-color: #008473;
+  --btn-active-color: #000000;
+}
+
+/* ================= Light/Dark Mode for Middle ================= */
+:root { --middle-bg: #ffffff; --middle-fg: #000000; }
+html.dark { --middle-bg: #000000; --middle-fg: #ffffff; }
+
+/* ================= Layout Structure ================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body { font-family: var(--page-font); }
+
+.stripe { width: 100%; display:block; }
+.top1 { height: var(--top1-h); background: var(--top1); position: relative; }
+.top2 { height: var(--top2-h); background: var(--top2); }
+.top3 { height: var(--top3-h); background: var(--top3); }
+
+.middle {
+  height: var(--mid-h);
+  background: var(--middle-bg);
+  color: var(--middle-fg);
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; padding: 2.5rem;
+}
+
+.bottom1 { height: var(--bt1-h); background: var(--bottom1); }
+.bottom2 { height: var(--bt2-h); background: var(--bottom2); }
+.bottom3 { height: var(--bt3-h); background: var(--bottom3); position: relative; }
+
+.main-stack { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+h1 { font-size: clamp(22px, 3.8vw, 60px); margin-bottom: .5rem; font-weight: 400; }
+p.lead { font-size: clamp(16px, 2.5vw, 28px); opacity: .95; }
+
+/* ================= Buttons ================= */
+.theme-toggle {
+  position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
+  display:flex; gap:6px;
+}
+.theme-toggle button {
+  display: inline-block;
+  min-width: 60px;  /* adjust until it looks right */
   text-align: center;
 }
 
-.container {
-  max-width: 600px;
-  padding: 20px;
-}
-
-h1 {
-  font-family: "NoBidMechanical", sans-serif;
+.theme-toggle button {
+  font-family: var(--page-font);
+  font-size: 14px;
   font-weight: 400;
-  font-size: 1.8rem;
-  margin-bottom: 0.5em;
+  padding: 6px 4px;
+  border: none; background: transparent;
+  color: var(--top1-foreground);
+  cursor: pointer; font-weight: 400;
 }
+.theme-toggle button:hover { color: var(--btn-hover-color); font-weight: 700; }
+.theme-toggle button.active { color: var(--btn-active-color); font-weight: 700; }
 
-.name {
-  font-weight: 700;
-  color: hsl(0, 0%, 0%); /* Customize with your school colors */
-}
-
-p {
-  font-size: 1.2rem;
-  color: #666;
+.designer {
+  position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
+  font-size: 14px; font-family: var(--page-font); font-weight: 400;
+  color: #ffffff;
 }

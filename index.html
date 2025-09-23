@@ -1,16 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>No Bid Mechanical</title>
+
+  <!-- Link stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Load your variable font -->
+  <style>
+    @font-face{
+      font-family: "NoBidMechanical";
+      src: url("NoBidMechanicalVF.woff2") format("woff2");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>The future home of the <span class="name">No Bid Mechanical</span> typeface family.</h1>
-    <p>Coming soon.</p>
-    <p>Designed by Xavier Sims.</p>
+
+  <!-- top header stripes -->
+  <div class="top1">
+    <!-- LIGHT/DARK buttons -->
+    <div class="theme-toggle" role="toolbar" aria-label="Theme controls">
+      <button id="btnLight" aria-pressed="false">LIGHT</button>
+      <button id="btnDark" aria-pressed="false">DARK</button>
+    </div>
   </div>
+  <div class="top2"></div>
+  <div class="top3"></div>
+
+  <!-- middle content -->
+  <main class="middle">
+    <div class="main-stack">
+      <h1>The future home of the <strong>NoBidMechanical</strong> typeface family.</h1>
+    
+    </div>
+  </main>
+
+  <!-- bottom stripes -->
+  <div class="bottom1"></div>
+  <div class="bottom2"></div>
+  <div class="bottom3">
+    <div class="designer">Designed by Xavier Sims.</div>
+  </div>
+
+  <!-- Link script -->
+  <script src="script.js"></script>
 </body>
 </html>
