@@ -20,6 +20,7 @@ html.ftcc {
   --top1-foreground: #ffffff;
   --btn-hover-color: #33a7b5bf;
   --btn-active-color: #ffffff;
+  --btn-active-hover-color: #e4e4e4;
 }
 
 /* ECU */
@@ -30,6 +31,7 @@ html.ecu {
   --top1-foreground: #ffffff;
   --btn-hover-color: #00818F;
   --btn-active-color: #ffffff;
+  --btn-active-hover-color: #e4e4e4;
 }
 
 /* NCSU */
@@ -40,6 +42,7 @@ html.ncsu {
   --top1-foreground: #ffffff;
   --btn-hover-color: #008473;
   --btn-active-color: #ffffff;
+  --btn-active-hover-color: #e4e4e4;
 }
 
 /* ================= Light/Dark Mode for Middle ================= */
@@ -94,6 +97,13 @@ p.lead { font-size: clamp(16px, 2.5vw, 28px); opacity: .95; }
 }
 .theme-toggle button:hover { color: var(--btn-hover-color); font-weight: 700; }
 .theme-toggle button.active { color: var(--btn-active-color); font-weight: 700; }
+.theme-toggle button.active:hover { color: var(--btn-active-hover-color); font-weight: 700; }
+
+/* Ensure active buttons still respond to hover */
+.theme-toggle button.active:hover {
+  color: var(--btn-active-hover-color);  /* same hover color */
+  font-weight: 700;               /* keep bold */
+}
 
 .designer {
   position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
